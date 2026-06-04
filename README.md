@@ -24,6 +24,12 @@ TemkaMiner is a fast, self-contained miner for **Pearl (PRL)**. It is heavily tu
 the **RTX 5080** (~185–190 TH/s) and runs on modern **NVIDIA RTX** cards (30, 40 and 50
 series and newer). One small `.exe`, no installer, no dependencies beyond your GPU driver.
 
+## ⬇ Download
+
+[![Download](https://img.shields.io/badge/Download-latest%20release-2ea44f?style=for-the-badge)](https://github.com/Kibzarium/TemkaMiner-pearl-gpu-miner-PRL/releases/latest)
+
+**Windows x64** · NVIDIA RTX 30 / 40 / 50 series · no installer. Unzip, set your wallet in `start.bat`, and run.
+
 ---
 
 ## ✨ Features
@@ -133,6 +139,38 @@ announced in the console at startup. There are no hidden fees.
 GPU miners are **routinely flagged as false positives** by antivirus software — this is
 true of *every* miner, not just this one. If your AV quarantines the file, add a folder
 exclusion. The binary is **not** packed or obfuscated.
+
+## ❓ FAQ
+
+**How do I mine Pearl (PRL) on an NVIDIA GPU?**
+Download TemkaMiner, unzip it, put your PRL wallet in `start.bat`, and run it. It connects to a
+Pearl pool (BaikalMine or HeroMiners) and starts mining on your NVIDIA GPU — no extra setup.
+
+**What is the best Pearl (PRL) miner for the RTX 5080?**
+TemkaMiner is tuned specifically for the RTX 5080 and reaches ~185–190 TH/s, at the card's
+silicon ceiling.
+
+**Which NVIDIA GPUs are supported?**
+RTX 30, 40 and 50 series and newer, plus data-center cards like the A100 and H100. GTX 16xx,
+RTX 20xx and older are not supported.
+
+**Can I mine Pearl on multiple GPUs?**
+Yes. Run `start-all-gpus.bat` (or pass `--all-gpus`) to mine on every GPU in the rig from a
+single process, with one dashboard.
+
+**Which mining pools does it support?**
+Any LuckyPool-protocol Pearl pool, including BaikalMine (`pearl.baikalmine.com:2010`) and
+HeroMiners (`pearl.herominers.com:1200`).
+
+**Is there a developer fee?**
+Yes — a transparent 1% time-based fee, shown in the console at startup. There are no hidden fees.
+
+**Why does my antivirus flag the miner?**
+Every GPU miner is commonly flagged as a false positive. TemkaMiner is not packed or obfuscated;
+add a folder exclusion if your antivirus quarantines it.
+
+**Does TemkaMiner run on Linux?**
+The download is the Windows build. See the **Linux** section above for how to run the Linux binary.
 
 ## 📄 License
 
